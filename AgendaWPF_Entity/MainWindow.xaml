@@ -1,0 +1,41 @@
+﻿<Window x:Class="AgendaWPF_Entity.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AgendaWPF_Entity"
+        mc:Ignorable="d"
+        Icon="Icons\agendar.png"
+        Title="Agenda WPF" Height="600" Width="800"
+        WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Label Content="ID:" HorizontalAlignment="Left" Margin="22,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.509,0.541"/>
+        <TextBox x:Name="TxtID" HorizontalAlignment="Left" Margin="22,35,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" Height="20"/>
+
+        <Label Content="Nome:" HorizontalAlignment="Left" Margin="22,65,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="TxtNome" HorizontalAlignment="Left" Margin="22,90,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="400" Height="20"/>
+
+        <Label Content="E-mail:" HorizontalAlignment="Left" Margin="22,125,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.58,-1.154"/>
+        <TextBox x:Name="TxtEmail" HorizontalAlignment="Left" Margin="22,150,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="400" Height="20"/>
+
+        <Label Content="Telefone:" HorizontalAlignment="Left" Margin="22,185,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="TxtTelefone" HorizontalAlignment="Left" Margin="22,210,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" Height="20"/>
+
+        <DataGrid x:Name="dgDados" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="10,344,10,10" IsReadOnly="True"/>
+
+        <StackPanel Orientation="Horizontal" Margin="6,250,0,0" HorizontalAlignment="Left"> 
+            
+            <Button x:Name="btInserir" Content="Inserir" HorizontalAlignment="Left" Margin="15,0,0,0" VerticalAlignment="Top" Click="btInserir_Click"/>
+            <Button x:Name="btAlterar" Content="Alterar" HorizontalAlignment="Left" Margin="15,0,0,0" VerticalAlignment="Top"/>
+            <Button x:Name="btLocalizar" Content="Localizar" HorizontalAlignment="Left" Margin="15,0,0,0" VerticalAlignment="Top"/>
+            <Button x:Name="btExcluir" Content="Excluir" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top"/>
+            <Button x:Name="btSalvar" Content="Salvar" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" Click="btSalvar_Click"/>
+            <Button x:Name="btCancelar" Content="Cancelar" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" Click="btCancelar_Click"/>
+            
+        </StackPanel>
+
+
+
+
+    </Grid>
+</Window>
